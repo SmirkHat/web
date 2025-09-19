@@ -1,10 +1,152 @@
 ---
 title: "Co je to aptX?"
-description: "Vysvětlujeme audio kodek aptX, jeho výhody pro bezdrátový přenos zvuku a proč je důležitý pro kvalitní Bluetooth audio."
-author: "Pavel Dvořák"
+description: "aptX (Audio Processing Technology) je zvukový kodek, který je tu s námi již desítky let. Aktuálně je vyvíjený společností Qualcomm a jeho účel je poskytnout uživatelům co nejnižší latenci či nejkvalitnější přenos zvuku mezi bezdrátovými sluchátky a mobilním telefonem."
+author: "Hogůšik"
 date: "17.07.2025 18:18"
 image: "/aptx-audio-codec-technology.jpg"
 ---
 
-Kodek
+## Podpora aptX
+
+Aby mohlo aptX fungovat, musí mít obě zařízení, přes které chci poslouchat příslušný kodek. Je sice pěkné, že mám v mém ultra nadupaném telefonu všechny verze aptX, ale pokud na to nemám sluchátka vybavená tímto kodekem, tato technologie nebude použita a poslouchat budu přes jiný kodek, nejčastěji AAC či SBC.
+
+Kvůli licenčnímu poplatku, který musí výrobci platit za implementaci kodeku ve svých zařízeních, tímto kodekem nejsou vybavena všechna sluchátka, telefony, tablety, mikrofony či další elektronika. Naštěstí je na oficiálních stránkách [pěkná databáze](https://www.aptx.com/products), kde si můžete vyhledat všechna zařízení s aptX.
+
+Podpora chybí hlavně u Samsung nebo Apple zařízení, které spoléhají na jiné kodeky (AAC v případě Applu, či vlastní Samsung Scalable kodek v případě korejského giganta), ale také často u levnějších TWS sluchátek.
+
+## Latence
+
+Latence je totiž častý problém bezdrátových sluchátek, s čímž má aptX pomoci. Zatímco do drátových sluchátek jde zvuk do takzvaného “DAC”u (digital to analog converter), kde se signál převede a dostane se do zesilovače. Zesilovač signál následně zesílí a odešle ho kabelem do sluchátek, u bezdrátových sluchátek je to trošku složitější.
+
+Signál se musí nejdříve zakódovat, odeslat do Bluetooth vysílače, který signál nasdílí přes Bluetooth do Vašich sluchátek, které musí dekódovat pro původní signál, který se musel zakódovat. Až poté se může provést proces, který se provádí u drátových sluchátek.
+
+Některá sluchátka to ale mají ještě složitější, zvuk totiž sdílí jen do jednoho sluchátka. Sluchátko poté musí poslat zvuk do druhého a chvíli tedy počkat, než bude mít signál i druhé sluchátko, aby nedošlo ke zpoždění mezi sluchátky. Tento postup je levnější, takže se s ním setkáme u většiny levných sluchátek.
+
+## Kvalita zvuku
+
+Další podstatná věc, kterou kodek ovlivňuje, je kvalita zvuku. Zde se cílil Qualcomm na to, aby byla i kvalita zvuku lepší, než u jiných kodeků. U kvality zvuku je spoustu dalších věcí, které zvuk ovlivní, ale kodek je jedním z aspektů, které ovlivní zvuk nějak výrazněji. Celkově tedy Qualcomm vytvořil aptX s cílem vylepšení zážitku na poslouchání bezdrátovými sluchátky.
+
+Nic ale není dokonalé a aptX má krom těchto výhod i své nevýhody. Tento “uživatelsky příjemný zážitek” proběhne jen tehdy, kdy budou vybavené tímto kodekem obě zařízení, tedy například sluchátka a chytrý telefon.
+
+## Verze aptX
+
+### aptX
+
+Základní aptX je určen pro skvělou kvalitu zvuku a nízkou latenci. Je to starší původní verze, než začal Qualcomm vyvíjet další druhy, a tudíž se nelze divit nižším specifikacím. Tento kodek totiž umí jen 16-bit audio s frekvencí 48 kHz a tokem až 384 kbps. To je pořád dost, ale další verze mají mnohem lepší specifikace v různých odvětvích.
+
+#### Specifikace aptX
+
+- Kvalita: Až 16-bit
+- Max. datový tok: 384 kbps
+- Max. frekvence: 48 kHz
+- Latence okolo 80-150 ms
+
+### aptX LL (Low Latency)
+
+Pro nejlepší zážitek z hraní či sledování filmu potřebujete nízkou latenci, a s tímto má pomoci aptX LL. Qualcomm slibuje minimální latenci cca 40 ms s kvalitou zvuku trvale lepší, než například kodek SBC.
+
+#### Specifikace aptX LL
+
+- Kvalita: Až 16-bit
+- Max. datový tok: 352 kbps
+- Max. frekvence: 44.1 kHz
+- Nízká latence okolo 40 ms
+
+### aptX HD
+
+aptX HD byl kodek vytvořen hlavně za účelem zlepšení kvality zvuku. Nabízí nejlepší zvuk z rodinky aptX a dokáže přehrávat 24-bit zvuk až v toku 576 kbps. Kvalita zvuku šla ale na úkor latence, která je zde nejvyšší z rodinky, tedy 150 ms. Oproti aptX LL je latence skoro čtyřnásobná.
+
+#### Specifikace aptX HD
+
+- Kvalita: Až 24-bit
+- Max. datový tok: 576 kbps
+- Max. frekvence: 48 kHz
+- Vysoká latence okolo 150 ms
+
+### aptX Adaptive
+
+AptX Adaptive je taková kombinace výše jmenovaných verzí. Přináší vylepšenou kvalitu zvuku, ale zato se také orientuje na nižší latenci. Kromě toho má také aptX Adaptive “adaptivně” přizpůsobovat datový tok, takže by nemělo dojít k přerušování zvuku a problémům s připojením, byť na tom někdy malinko utrpí kvalita zvuku. Součástí kodeku je poté i **aptX Voice**, což je funkce navržena pro vylepšení kvality hlasu při hovorech. Zajišťuje kvalitu hovoru až 32 kHz, pokud voláte přes hands-free (např. s Bluetooth sluchátky).
+
+#### Specifikace aptX Adaptive
+
+- Kvalita: Až 24-bit
+- Max. datový tok: 470 kbps
+- Max. frekvence: 48 kHz
+- Proměnlivý datový tok
+- Latence okolo 80 ms
+- Podpora aptX Voice
+
+## Porovnání aptX s konkurencí
+
+aptX není samozřejmě jediný kodek ve sluchátkách, a často si můžete vybrat, který kodek chcete aktuálně používat. V tu chvíli, vyjma Samsung sluchátek a telefonu (kde se používá Samsung Scalable kodek), jsou k dispozici především tři další kodeky, a sice LDAC, AAC a SBC. Jak si v porovnání s nimi aptX vede?
+
+### aptX HD vs LDAC
+
+LDAC je technicky nejúčinnějším kodekem, má vyšší datový tok a můžete poslouchat až 24-bit audio s frekvencí 96kHz. Hlavně se ale vyskytuje v každém zařízení s Androidem 8.0 a výše. Je ale méně stabilní a při horším připojení jsou znatelné poklesy kvality audia, není tedy vhodný na hry či na filmy. Díky zaměření aptX HD spíše na kvalitu zvuku se ale nízkou latencí nechlubí ani jeden a na hraní nebo sledování filmů tyto kodeky nejsou ideální. Při hrách bych doporučil spíše aptX LL nebo Adaptive.
+
+Výhoda LDAC je možnost vybrání si datový tok až na 990 kbps, případně nechat vše na automatice.
+
+I přes kvality aptX HD, jakožto kodeku z nejlepším zvukem z portfolia Qualcommu, pořád LDAC nabízí znatelně lepší zvuk a řadí se mezi špičku Bluetooth kodeků. Přesto je ale aptX HD pořád skvělý kodek na poslech hudby s velmi dobrou kvalitou, a nemohu ignorovat stabilnější připojení či o trochu nižší, sic pořád vysokou latenci (150 ms oproti 200 ms u LDACu).
+
+#### Specifikace LDAC
+
+- Kvalita: Až 24-bit
+- Max. datový tok: 990 kbps
+- Max. frekvence: 96 kHz
+- Možnost vybrat si datový tok, případně to nechat na automatice
+- Vysoká latence okolo 200 ms
+
+| **Výhody aptX HD:** | **Výhody LDAC:** |
+| --- | --- |
+| Nižší latence | Nachází se v každém novém telefonu s Androidem 8.0 a výše |
+| --- | --- |
+| Lepší stabilita připojení | Lepší kvalita zvuku |
+| --- | --- |
+|     | Možnost vybrání si datového toku |
+| --- | --- |
+
+### aptX vs. AAC
+
+AAC, tedy Advanced Audio Coding je jeden z nejpoužívanějších kodeků vůbec. Dnes najdeme AAC prakticky ve všech sluchátkách a jak telefonech s Androidem 8.0 a vyšší, tak v zařízeních Applu, který na tuto technologii vsadil. Vlastně, aptX na iPhonu nebo na iPadu nepůjde. Pokud vlastníte Apple zařízení, vybírejte hlavně zařízení s AAC, což je dnes naštěstí drtivá většina sluchátek.
+
+U Androidu je aptX lepší volba, latence je nižší a kvalita zvuku je lepší. Zatímco u AAC je maximální datový tok 264 kbps, aptX zvládá v závislosti na verzi až 576 kbps. AAC má ale neobvykle vysokou maximální frekvenci, a sice 96 kHz, což je stejně jako např. LDAC.
+
+#### Specifikace AAC
+
+- Kvalita: Až 16-bit
+- Max. datový tok: 264 kbps
+- Max. frekvence: 96 kHz
+- Variabilní datový tok
+- Latence okolo 150 ms
+
+| **Výhody aptX:** | **Výhody AAC:** |
+| --- | --- |
+| Lepší kvalita zvuku | Mnohem lepší podpora kodeku |
+| --- | --- |
+| Nižší latence | Kvalitnější poslech v Apple zařízeních |
+| --- | --- |
+
+### aptX vs. SBC
+
+SBC (Sub-band Coding) je dnes nutný kodek pro každá stereo Bluetooth sluchátka s A2DP (Advanced Audio Distribution Profile), což znamená, že SBC najdeme téměř všude. Má maximální datový tok až 328 kbps (v mono výstupu maximálně 198 kbps) s frekvencí 48 kHz. Je to ten nejzákladnější kodek, který nenabídne nijak zajímavé funkce a kvalita zvuku… poslouží.
+
+Při přenosu však dochází ke znatelné ztrátě dat, latence je okolo 100-150 ms a zvuk nemusí být konzistentní, což je patrné hlavně u levnějších sluchátek.
+
+aptX je zde až na podporu ve všem lepší, a doporučoval bych tedy hledat alespoň zařízení se základní verzí.
+
+#### Specifikace SBC
+
+- Kvalita: Až 16-bit
+- Max. datový tok: 328 kbps
+- Max. frekvence: 48 kHz
+- Latence okolo 100-150 ms
+
+| **Výhody aptX:** | **Výhody SBC:** |
+| --- | --- |
+| Nižší latence | Nutnost pro všechna stereo BT sluchátka s A2DP |
+| --- | --- |
+| Lepší kvalita zvuku |     |
+| --- | --- |
+
+
 \`\`\`
