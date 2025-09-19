@@ -24,3 +24,5 @@ Jsme otevřená komunita! Pokud máš nápad na úpravu, pull requesty jsou vít
 ## Licence
 
 Tento projekt je open-source pod licencí MIT.
+
+Na tvorbě webu se podílela umělá inteligence v0 od Vercelu.
