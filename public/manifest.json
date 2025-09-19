@@ -1,7 +1,7 @@
 {
-  "name": "SmirkHat.org - Moderní webové řešení",
-  "short_name": "SmirkHat",
-  "description": "Moderní webové řešení s pokročilými funkcemi a elegantním designem",
+  "name": "SmirkHat.org",
+  "short_name": "SmirkHat.org",
+  "description": "Parta nadšenců do technologií spojená legendárním SmirkHat emoji. Milujeme open-source, self-hosting a píšeme články o IT a programování.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
