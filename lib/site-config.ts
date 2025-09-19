@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "SmirkHat.org",
-  title: "SmirkHat.org - Technologie, návody a zajímavosti",
+  title: "SmirkHat.org",
   description:
-    "Objevte nejnovější technologie, užitečné návody a zajímavé články o IT světě. SmirkHat.org je váš průvodce digitálním světem.",
+    "Parta nadšenců do technologií spojená legendárním SmirkHat emoji. Milujeme open-source, self-hosting a píšeme články o IT a programování.",
   url: "https://smirkhat.org",
-  ogImage: "/og-image.png",
+  ogImage: "/og-image.jpg",
   favicon: "/favicon.ico",
   keywords: [
     "technologie",
@@ -19,7 +19,7 @@ export const siteConfig = {
     "SmirkHat",
   ],
   author: {
-    name: "SmirkHat Team",
+    name: "SmirkHat.org",
     url: "https://smirkhat.org",
   },
   social: {

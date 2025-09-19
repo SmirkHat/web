@@ -3,64 +3,57 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Mail, MessageCircle, Github, Globe, Quote, Twitter, Linkedin, MapPin, Calendar, Coffee } from "lucide-react"
+import { Mail, MessageCircle, Github, Globe, Quote, Twitter, Linkedin, MapPin, Calendar, Coffee, Instagram } from "lucide-react"
 
 const team = [
-  {
-    name: "Alex",
-    role: "Founder & Backend Developer",
-    bio: "Zakladatel komunity, miluje Rust a self-hosting. Spravuje většinu serverové infrastruktury a vede technické rozhodování.",
-    skills: ["Rust", "Docker", "PostgreSQL", "Linux", "Kubernetes", "AWS"],
-    avatar: "/developer-avatar-male.jpg",
-    email: "alex@smirkhat.org",
-    location: "Praha, CZ",
-    joinedYear: "2020",
-    github: "alexdev",
-    twitter: "alex_smirkhat",
-    linkedin: "alex-smirkhat",
-    specialization: "Backend Architecture",
-    favoriteTools: ["Neovim", "Tmux", "Alacritty"],
-    funFact: "Pije 6 šálků kávy denně ☕",
-  },
-  {
-    name: "Sarah",
-    role: "Frontend Developer & UX Designer",
-    bio: "Specialistka na React a TypeScript. Vytváří krásná uživatelská rozhraní a stará se o user experience našich projektů.",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind", "Figma", "Framer Motion"],
-    avatar: "/developer-avatar-female.jpg",
-    email: "sarah@smirkhat.org",
-    location: "Brno, CZ",
-    joinedYear: "2021",
-    github: "sarahux",
-    twitter: "sarah_codes",
-    linkedin: "sarah-frontend",
-    specialization: "Frontend & UX Design",
-    favoriteTools: ["VS Code", "Figma", "Chrome DevTools"],
-    funFact: "Má kolekci 50+ mechanických klávesnic ⌨️",
-  },
-  {
-    name: "Mike",
-    role: "DevOps Engineer & Security",
-    bio: "Stará se o CI/CD pipeline, monitoring a bezpečnost. Bez něj by naše služby neběžely tak spolehlivě a bezpečně.",
-    skills: ["Kubernetes", "Prometheus", "Grafana", "Terraform", "Ansible", "Security"],
-    avatar: "/devops-engineer-avatar.jpg",
-    email: "mike@smirkhat.org",
-    location: "Ostrava, CZ",
-    joinedYear: "2021",
-    github: "mike-ops",
-    twitter: "mike_devops",
-    linkedin: "mike-devops-eng",
-    specialization: "Infrastructure & Security",
-    favoriteTools: ["Kubectl", "Helm", "Terraform"],
-    funFact: "Má homelab s 12 servery doma 🖥️",
-  },
+{
+  name: "Dast",
+  role: "Technický správce",
+  bio: "Hlídá servery, domény i sociální sítě. Když běží vše hladce, je to jeho zásluha.",
+  avatar: "/dast.jpg",
+  email: "dast@smirkhat.org",
+  github: "danielsebesta",
+},
+{
+  name: "Hogůšik",
+  role: "Tvůrce obsahu",
+  bio: "Tvoří drtivou většinu obsahu na tomto webu, je hlavním kreativním motorem projektu.",
+  avatar: "/hogusik.jpg",
+  email: "hogusik@smirkhat.org",
+  github: "pitrdzej",
+},
+{
+  name: "Errorman",
+  role: "IT konzultant",
+  bio: "Řeší technické problémy rychle a efektivně. Vždy rád přijde, poradí a opraví.",
+  avatar: "/errorman.jpg",
+  email: "errorman@smirkhat.org",
+  instagram: "ondracabrnoch_photo",
+},
+{
+  name: "Kléma",
+  role: "Servery a propagace",
+  bio: "Propůjčuje servery a zkušenosti s online komunitami. Spojuje techniku s propagací.",
+  avatar: "/klema.jpg",
+  email: "klema@smirkhat.org",
+  github: "Klema4",
+},
+{
+  name: "Michal",
+  role: "Podpora a údržba",
+  bio: "Testuje funkčnost služeb, zajištuje základní podporu na Discordu. A pomáhá všude kde se dá.",
+  avatar: "/michal.jpg",
+  email: "michal@smirkhat.org",
+  github: "M1chal05",
+},
+
 ]
 
 const stats = [
-  { label: "Členů komunity", value: "500+" },
-  { label: "Aktivních projektů", value: "12" },
-  { label: "Hostovaných služeb", value: "25" },
-  { label: "Článků na blogu", value: "48" },
+  { label: "Členů týmu", value: "5" },
+  { label: "Aktivních služeb", value: "12+" },
+  { label: "Hostovaných služeb", value: "NaN" },
+  { label: "Článků na blogu", value: "NaN" },
 ]
 
 export default function ONasPage() {
@@ -70,15 +63,8 @@ export default function ONasPage() {
       <main className="py-20">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
-          <div className="text-center mb-16">
-            <div className="mx-auto h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-              <span className="text-4xl">😏</span>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight mb-4">O SmirkHat komunitě</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Jsme skupina technologických nadšenců, které spojil jeden emoji. Od roku 2020 budujeme komunitu zaměřenou
-              na open-source projekty, self-hosting a sdílení znalostí.
-            </p>
+           <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold tracking-tight mb-4">O nás</h1>
           </div>
 
           {/* Author Quote Section */}
@@ -86,14 +72,21 @@ export default function ONasPage() {
             <CardContent className="p-8 text-center">
               <Quote className="h-8 w-8 text-primary mx-auto mb-4" />
               <blockquote className="text-lg italic text-muted-foreground mb-4 leading-relaxed">
-                "Technologie by měly sloužit lidem, ne naopak. Proto se zaměřujeme na open-source řešení, která dávají
-                uživatelům kontrolu nad jejich daty a digitálním životem."
+                <p>
+                  Často jsem přemýšlel, co po mně jednou zůstane na internetu. Moje emoji tvorba a to, jak ji lidé
+                  používají na Discordu, v náhledových obrázcích na YouTube a na různých webech, mi dělá velkou radost.
+                  Vůbec mě to nezklamalo. Všech mých osm emoji na emoji.gg má teď dohromady přes 21 tisíc stažení. Samotné SmirkHat má 5 tisíc stažení jen tam – a kdo ví, kolik celkem po celém internetu. To je šílené, když se nad tím zamyslím.
+                  Jsem vděčný každému, kdo má z mých emoji radost. Nikdy bych nečekal, že se tenhle šklebící se týpek s
+                  kloboukem tolik rozšíří. Moc vám za to děkuju.
+                </p>
               </blockquote>
-              <cite className="text-sm font-medium text-primary">— Alex, zakladatel SmirkHat komunity</cite>
+              <cite className="text-sm font-medium text-primary">— Vivi, tvůrce SmirkHat emoji</cite>
+              <br />
+              <small className="text-sm text-muted-foreground">(přeloženo, zkráceno)</small>
             </CardContent>
           </Card>
 
-          {/* Stats */}
+          {/* Stats 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
               <Card key={index} className="text-center bg-card border-0">
@@ -104,111 +97,61 @@ export default function ONasPage() {
               </Card>
             ))}
           </div>
+          */}
 
           {/* Team */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Náš tým</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">Náš tým</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {team.map((member, index) => (
-                <Card key={index} className="bg-card border-0 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-6">
-                    {/* Header with avatar and basic info */}
-                    <div className="text-center mb-4">
+                <Card key={index} className="bg-card border-0 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <CardContent className="">
+                    {/* Avatar and basic info */}
+                    <div className="flex items-start gap-4 mb-4">
                       <img
                         src={member.avatar || "/placeholder.svg"}
                         alt={member.name}
-                        className="w-20 h-20 rounded-full mx-auto mb-3 object-cover border-4 border-primary/10"
+                        className="w-16 h-16 rounded-full object-cover border-2 border-primary/20 flex-shrink-0"
                       />
-                      <h3 className="font-bold text-lg mb-1">{member.name}</h3>
-                      <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
-                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-3">
-                        <MapPin className="h-3 w-3" />
-                        <span>{member.location}</span>
-                        <span>•</span>
-                        <Calendar className="h-3 w-3" />
-                        <span>Od {member.joinedYear}</span>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-bold text-lg mb-1 truncate">{member.name}</h3>
+                        <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
+                        <p className="text-muted-foreground text-xs leading-relaxed line-clamp-3">{member.bio}</p>
                       </div>
                     </div>
 
-                    {/* Bio */}
-                    <p className="text-muted-foreground text-sm mb-3 leading-relaxed text-center">{member.bio}</p>
-
-                    {/* Specialization */}
-                    <div className="mb-3">
-                      <h4 className="text-xs font-semibold text-primary mb-2 uppercase tracking-wide">Specializace</h4>
-                      <Badge variant="secondary" className="text-xs">
-                        {member.specialization}
-                      </Badge>
-                    </div>
-
-                    {/* Skills */}
-                    <div className="mb-3">
-                      <h4 className="text-xs font-semibold text-primary mb-2 uppercase tracking-wide">Technologie</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {member.skills.map((skill, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Favorite Tools */}
-                    <div className="mb-3">
-                      <h4 className="text-xs font-semibold text-primary mb-2 uppercase tracking-wide">
-                        Oblíbené nástroje
-                      </h4>
-                      <p className="text-xs text-muted-foreground">{member.favoriteTools.join(" • ")}</p>
-                    </div>
-
-                    {/* Fun Fact */}
-                    <div className="mb-4 p-2 bg-primary/5 rounded-lg">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Coffee className="h-3 w-3 text-primary" />
-                        <span className="text-xs font-semibold text-primary uppercase tracking-wide">Fun Fact</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">{member.funFact}</p>
-                    </div>
-
-                    {/* Contact & Social */}
-                    <div className="space-y-2">
-                      <h4 className="text-xs font-semibold text-primary uppercase tracking-wide">Kontakt</h4>
-
+                    {/* Contact & Social - kompaktní layout */}
+                    <div className="flex flex-wrap gap-2 pt-3 border-t border-border/50">
                       {/* Email */}
-                      <div className="flex items-center gap-3">
-                        <Mail className="h-4 w-4 text-muted-foreground" />
-                        <a
-                          href={`mailto:${member.email}`}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          {member.email}
-                        </a>
-                      </div>
-
-                      {/* Social Links */}
-                      <div className="flex gap-2 pt-1">
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted/50 hover:bg-primary/10 text-xs text-muted-foreground hover:text-primary transition-colors"
+                        title={member.email}
+                      >
+                        <Mail className="h-3 w-3" />
+                        <span className="hidden sm:inline">Email</span>
+                      </a>
+                      
+                      {/* GitHub nebo Instagram fallback */}
+                      {member.github ? (
                         <a
                           href={`https://github.com/${member.github}`}
-                          className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-                          title="GitHub"
+                          className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted/50 hover:bg-primary/10 text-xs text-muted-foreground hover:text-primary transition-colors"
+                          title={`GitHub: @${member.github}`}
                         >
-                          <Github className="h-4 w-4" />
+                          <Github className="h-3 w-3" />
+                          <span className="hidden sm:inline">GitHub</span>
                         </a>
+                      ) : member.instagram ? (
                         <a
-                          href={`https://twitter.com/${member.twitter}`}
-                          className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-                          title="Twitter"
+                          href={`https://instagram.com/${member.instagram}`}
+                          className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted/50 hover:bg-primary/10 text-xs text-muted-foreground hover:text-primary transition-colors"
+                          title={`Instagram: @${member.instagram}`}
                         >
-                          <Twitter className="h-4 w-4" />
+                          <Instagram className="h-3 w-3" />
+                          <span className="hidden sm:inline">Instagram</span>
                         </a>
-                        <a
-                          href={`https://linkedin.com/in/${member.linkedin}`}
-                          className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-                          title="LinkedIn"
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      </div>
+                      ) : null}
                     </div>
                   </CardContent>
                 </Card>
@@ -216,34 +159,7 @@ export default function ONasPage() {
             </div>
           </div>
 
-          {/* Contact */}
-          <Card className="max-w-4xl mx-auto bg-card border-0">
-            <CardContent className="p-8 text-center">
-              <h2 className="text-2xl font-bold mb-4">Připojte se k nám</h2>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Máte zájem o naše projekty? Chcete se zapojit do komunity? Kontaktujte nás nebo se připojte na náš
-                Discord server.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button className="rounded-full">
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Discord
-                </Button>
-                <Button variant="outline" className="rounded-full bg-transparent">
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </Button>
-                <Button variant="outline" className="rounded-full bg-transparent">
-                  <Mail className="h-4 w-4 mr-2" />
-                  Email
-                </Button>
-                <Button variant="outline" className="rounded-full bg-transparent">
-                  <Globe className="h-4 w-4 mr-2" />
-                  Web
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+       
         </div>
       </main>
       <Footer />

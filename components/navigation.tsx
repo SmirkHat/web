@@ -12,7 +12,6 @@ const navigation = [
   { name: "Domů", href: "/" },
   { name: "Stáhnout", href: "/stahnout" },
   { name: "Služby", href: "/sluzby" },
-  { name: "Projekty", href: "/projekty" },
   { name: "O nás", href: "/o-nas" },
 ]
 
@@ -46,8 +45,8 @@ export function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="hidden md:block">
-        <div className="container mx-auto px-4 py-4 text-center">
-          <Link href="/" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
+        <div className="container mx-auto px-4 pt-4 text-center">
+          <Link href="/" className="text-2xl font-bold hover:text-primary/80 transition-colors">
             {siteConfig.name}
           </Link>
         </div>
@@ -76,7 +75,7 @@ export function Navigation() {
 
       <div className="md:hidden container mx-auto px-4 flex h-16 items-center">
         <div className="flex-1">
-          <Link href="/" className="text-lg font-bold text-primary hover:text-primary/80 transition-colors">
+          <Link href="/" className="text-lg font-bold hover:text-primary/80 transition-colors">
             {siteConfig.name}
           </Link>
         </div>

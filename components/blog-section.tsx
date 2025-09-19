@@ -27,20 +27,21 @@ export async function BlogSection() {
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute bottom-1 left-1 right-4">
                     <Badge variant="secondary" className="text-xs bg-card/90 text-card-foreground border-0">
                       {post.date}
                     </Badge>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg leading-tight text-balance group-hover:text-primary transition-colors mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">{post.description}</p>
+                <CardContent className="pb-3 pt-1">
                   <div className="flex items-center text-xs text-muted-foreground">
                     <span>Autor: {post.author}</span>
                   </div>
+                  <h3 className="font-bold text-lg leading-tight text-balance group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">{post.description}</p>
+
                 </CardContent>
               </Card>
             </Link>

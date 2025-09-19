@@ -3,6 +3,9 @@ import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
 import { BlogSection } from "@/components/blog-section"
 import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
+import { Mail, MessageCircle, Github, Globe, Quote, Twitter, Linkedin, MapPin, Calendar, Coffee, Instagram } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default async function HomePage() {
   return (
@@ -12,7 +15,10 @@ export default async function HomePage() {
         <HeroSection />
         <FeaturesSection />
         <BlogSection />
+        
+
       </main>
+           
       <Footer />
     </div>
   )
