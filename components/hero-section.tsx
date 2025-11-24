@@ -8,7 +8,13 @@ export function HeroSection() {
           <div className="mx-auto max-w-3xl">
             <div className="mb-8">
               <div className="mx-auto h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <span className="text-4xl">😏</span>
+                <img
+                  src="https://cdn3.emoji.gg/emojis/5027_tips_fedora.png"
+                  alt="SmirkHat"
+                  className="h-10 w-10 md:h-12 md:w-12"
+                  loading="lazy"
+                  draggable={false}
+                />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance mb-6">
                 Od jednoho{" "}
