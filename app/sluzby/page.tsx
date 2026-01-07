@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -17,13 +16,12 @@ const services = [
   { icon: GitBranch, title: "GitHat", description: "Soukromá Git instance pro projekty", access: "Invite only", url: "https://git.smht.eu/" },
   { icon: Zap, title: "OmniTools", description: "Sada různých užitečných nástrojů", access: "Public", url: "https://tools.smht.eu/" },
   { icon: FileText, title: "Send", description: "Soukromé sdílení souborů", access: "Public", url: "https://send.smht.eu/" },
-   { icon: Server, title: "DomainMOD", description: "Správa veškerých domén, jejich expirací a prodlužování", access: "Invite only", url: "https://dom.smht.eu/" },
+  { icon: Server, title: "DomainMOD", description: "Správa veškerých domén, jejich expirací a prodlužování", access: "Invite only", url: "https://dom.smht.eu/" },
 ]
 
 export default function SluzbyPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <main className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -61,22 +59,22 @@ export default function SluzbyPage() {
                 </Card>
               )
             })}
-           
+
           </div>
-          
+
         </div>
-{/* Sponzoring */}
-<div className="mt-16 flex justify-center px-4">
-  <Card className="max-w-xl w-full bg-card border border-border shadow-md text-center p-6">
-    {/* Logo nahoře */}
-    <div className="mb-4 flex justify-center">
-      <img src="/hostnow.svg" alt="Hostnow.cz" className="h-12 md:h-16 lg:h-20 object-contain" />
-    </div>
-    <p className="text-sm md:text-base text-muted-foreground">
-      Naše služby jsou možné i díky podpoře <strong>Hostnow.cz</strong>, který nám poskytuje prostor pro hostování PHP proxy serverů, například pro <em>Šifrátor</em> nebo <em>GIF generátor pro Discord</em>. Děkujeme za důvěru a podporu naší komunity!
-    </p>
-  </Card>
-</div>
+        {/* Sponzoring */}
+        <div className="mt-16 flex justify-center px-4">
+          <Card className="max-w-xl w-full bg-card border border-border shadow-md text-center p-6">
+            {/* Logo nahoře */}
+            <div className="mb-4 flex justify-center">
+              <img src="/hostnow.svg" alt="Hostnow.cz" className="h-12 md:h-16 lg:h-20 object-contain" />
+            </div>
+            <p className="text-sm md:text-base text-muted-foreground">
+              Naše služby jsou možné i díky podpoře <strong>Hostnow.cz</strong>, který nám poskytuje prostor pro hostování PHP proxy serverů, například pro <em>Šifrátor</em> nebo <em>GIF generátor pro Discord</em>. Děkujeme za důvěru a podporu naší komunity!
+            </p>
+          </Card>
+        </div>
 
       </main>
       <Footer />

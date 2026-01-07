@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -48,7 +47,6 @@ const emojis = [
 export default function EmojiPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <main className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -71,39 +69,39 @@ export default function EmojiPage() {
                   <img src={emoji.file} alt={emoji.title} className="mx-auto h-24 w-24 object-contain" />
                   <p className="text-muted-foreground">{emoji.description}</p>
                   <div className="flex flex-wrap gap-2 justify-center pt-4">
-  {emoji.emojiGG && (
-    <Button asChild className="rounded-full">
-      <a href={emoji.emojiGG} target="_blank" rel="noopener noreferrer">
-        <Globe className="h-4 w-4 mr-2" />
-        emoji.gg
-      </a>
-    </Button>
-  )}
-  {emoji.bttv && (
-    <Button asChild className="rounded-full" variant="outline">
-      <a href={emoji.bttv} target="_blank" rel="noopener noreferrer">
-        <Globe className="h-4 w-4 mr-2" />
-        BetterTTV
-      </a>
-    </Button>
-  )}
-  {emoji.sevenTV && (
-    <Button asChild className="rounded-full" variant="outline">
-      <a href={emoji.sevenTV} target="_blank" rel="noopener noreferrer">
-        <Globe className="h-4 w-4 mr-2" />
-        7TV
-      </a>
-    </Button>
-  )}
-  {emoji.file && (
-    <Button asChild className="rounded-full" variant="outline">
-      <a href={emoji.file} download>
-        <Download className="h-4 w-4 mr-2" />
-        Stáhnout PNG
-      </a>
-    </Button>
-  )}
-</div>
+                    {emoji.emojiGG && (
+                      <Button asChild className="rounded-full">
+                        <a href={emoji.emojiGG} target="_blank" rel="noopener noreferrer">
+                          <Globe className="h-4 w-4 mr-2" />
+                          emoji.gg
+                        </a>
+                      </Button>
+                    )}
+                    {emoji.bttv && (
+                      <Button asChild className="rounded-full" variant="outline">
+                        <a href={emoji.bttv} target="_blank" rel="noopener noreferrer">
+                          <Globe className="h-4 w-4 mr-2" />
+                          BetterTTV
+                        </a>
+                      </Button>
+                    )}
+                    {emoji.sevenTV && (
+                      <Button asChild className="rounded-full" variant="outline">
+                        <a href={emoji.sevenTV} target="_blank" rel="noopener noreferrer">
+                          <Globe className="h-4 w-4 mr-2" />
+                          7TV
+                        </a>
+                      </Button>
+                    )}
+                    {emoji.file && (
+                      <Button asChild className="rounded-full" variant="outline">
+                        <a href={emoji.file} download>
+                          <Download className="h-4 w-4 mr-2" />
+                          Stáhnout PNG
+                        </a>
+                      </Button>
+                    )}
+                  </div>
 
                 </CardContent>
               </Card>

@@ -1,23 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 import { Suspense } from "react"
 import { siteConfig } from "@/lib/site-config"
 import { LoadingSpinner } from "@/components/loading-spinner"
+import { Navigation } from "@/components/navigation"
 import "./globals.css"
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-})
 
 export const metadata: Metadata = {
   title: siteConfig.title,
@@ -69,8 +58,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
-  category: "technology",
-    generator: 'v0.app'
+  category: "technology"
 }
 
 export default function RootLayout({
@@ -79,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="cs">
+    <html lang="cs" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -112,10 +100,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
+        <Navigation />
         <Suspense fallback={<LoadingSpinner />}>
           {children}
-          <Analytics />
         </Suspense>
       </body>
     </html>

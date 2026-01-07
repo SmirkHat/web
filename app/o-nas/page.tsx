@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -6,46 +5,46 @@ import { Badge } from "@/components/ui/badge"
 import { Mail, MessageCircle, Github, Globe, Quote, Twitter, Linkedin, MapPin, Calendar, Coffee, Instagram } from "lucide-react"
 
 const team = [
-{
-  name: "Dast",
-  role: "Technický správce",
-  bio: "Hlídá servery, domény i sociální sítě. Když běží vše hladce, je to jeho zásluha.",
-  avatar: "/dast.jpg",
-  email: "dast@smirkhat.org",
-  github: "danielsebesta",
-},
-{
-  name: "Hogůšik",
-  role: "Tvůrce obsahu",
-  bio: "Tvoří drtivou většinu obsahu na tomto webu, je hlavním kreativním motorem projektu.",
-  avatar: "/hogusik.jpg",
-  email: "hogusik@smirkhat.org",
-  github: "pitrdzej",
-},
-{
-  name: "Errorman",
-  role: "IT konzultant",
-  bio: "Řeší technické problémy rychle a efektivně. Vždy rád přijde, poradí a opraví.",
-  avatar: "/errorman.jpg",
-  email: "errorman@smirkhat.org",
-  instagram: "ondracabrnoch_photo",
-},
-{
-  name: "Kléma",
-  role: "Servery a propagace",
-  bio: "Propůjčuje servery a zkušenosti s online komunitami. Spojuje techniku s propagací.",
-  avatar: "/klema.jpg",
-  email: "klema@smirkhat.org",
-  github: "Klema4",
-},
-{
-  name: "Michal",
-  role: "Podpora a údržba",
-  bio: "Testuje funkčnost služeb, zajištuje základní podporu na Discordu. A pomáhá všude kde se dá.",
-  avatar: "/michal.jpg",
-  email: "michal@smirkhat.org",
-  github: "M1chal05",
-},
+  {
+    name: "Dast",
+    role: "Technický správce",
+    bio: "Hlídá servery, domény i sociální sítě. Když běží vše hladce, je to jeho zásluha.",
+    avatar: "/dast.jpg",
+    email: "dast@smirkhat.org",
+    github: "danielsebesta",
+  },
+  {
+    name: "Hogůšik",
+    role: "Tvůrce obsahu",
+    bio: "Tvoří drtivou většinu obsahu na tomto webu, je hlavním kreativním motorem projektu.",
+    avatar: "/hogusik.jpg",
+    email: "hogusik@smirkhat.org",
+    github: "pitrdzej",
+  },
+  {
+    name: "Errorman",
+    role: "IT konzultant",
+    bio: "Řeší technické problémy rychle a efektivně. Vždy rád přijde, poradí a opraví.",
+    avatar: "/errorman.jpg",
+    email: "errorman@smirkhat.org",
+    instagram: "ondracabrnoch_photo",
+  },
+  {
+    name: "Kléma",
+    role: "Servery a propagace",
+    bio: "Propůjčuje servery a zkušenosti s online komunitami. Spojuje techniku s propagací.",
+    avatar: "/klema.jpg",
+    email: "klema@smirkhat.org",
+    github: "Klema4",
+  },
+  {
+    name: "Michal",
+    role: "Podpora a údržba",
+    bio: "Testuje funkčnost služeb, zajištuje základní podporu na Discordu. A pomáhá všude kde se dá.",
+    avatar: "/michal.jpg",
+    email: "michal@smirkhat.org",
+    github: "M1chal05",
+  },
 
 ]
 
@@ -59,11 +58,10 @@ const stats = [
 export default function ONasPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <main className="py-20">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
-           <div className="text-center mb-12">
+          <div className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight mb-4">O nás</h1>
           </div>
 
@@ -131,7 +129,7 @@ export default function ONasPage() {
                         <Mail className="h-3 w-3" />
                         <span className="hidden sm:inline">Email</span>
                       </a>
-                      
+
                       {/* GitHub nebo Instagram fallback */}
                       {member.github ? (
                         <a
@@ -159,7 +157,7 @@ export default function ONasPage() {
             </div>
           </div>
 
-       
+
         </div>
       </main>
       <Footer />

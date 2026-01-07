@@ -2,16 +2,16 @@ import { Card } from "@/components/ui/card"
 
 export function HeroSection() {
   return (
-    <section id="home" className="py-6 md:py-12">
-      <div className="container mx-auto px-4">
-        <Card className="p-12 md:p-20 text-center bg-gradient-to-br from-background to-muted/50 border-0 shadow-lg">
+    <section id="home" className="pt-14">
+      <div className="w-full">
+        <Card className="px-4 py-12 md:py-20 text-center flex flex-col items-center justify-center bg-gradient-to-br from-background to-muted/50 border-0 shadow-none rounded-none min-h-[calc(70vh-3.5rem)]">
           <div className="mx-auto max-w-3xl">
             <div className="mb-8">
-              <div className="mx-auto h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <div className="mx-auto h-24 w-24 rounded-full flex items-center justify-center mb-6">
                 <img
                   src="https://cdn3.emoji.gg/emojis/5027_tips_fedora.png"
                   alt="SmirkHat"
-                  className="h-10 w-10 md:h-12 md:w-12"
+                  className="h-24 w-24"
                   loading="lazy"
                   draggable={false}
                 />

@@ -5,15 +5,17 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import MarkdownRenderer from "@/components/markdown"
 
+
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage(props: BlogPostPageProps) {
+  const params = await props.params
   const post = await getBlogPost(params.slug)
-  
+
   if (!post) {
     notFound()
   }
@@ -28,16 +30,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <ArrowLeft className="w-4 h-4" />
           Zpět na blog
         </Link>
-        
+
         <article className="max-w-4xl mx-auto">
           <div className="aspect-[16/9] relative overflow-hidden rounded-lg mb-8">
-            <img 
-              src={post.image || "/placeholder.svg"} 
-              alt={post.title} 
-              className="object-cover w-full h-full" 
+            <img
+              src={post.image || "/placeholder.svg"}
+              alt={post.title}
+              className="object-cover w-full h-full"
             />
           </div>
-          
+
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               {post.date}
@@ -52,11 +54,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span>Autor: {post.author}</span>
             </div>
           </div>
-          
+
           {/* Nahradil jsem whitespace-pre-wrap s MarkdownRenderer */}
-          <MarkdownRenderer 
-            content={post.content} 
-            className="prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground" 
+          <MarkdownRenderer
+            content={post.content}
+            className="prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground"
           />
         </article>
       </div>
