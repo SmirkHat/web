@@ -18,7 +18,7 @@ export default async function HomePage() {
           <FeaturesSection />
         </AnimatedSection>
         <AnimatedSection delay={0.2}>
-          {/* @ts-expect-error Async Server Component */}
+
           <BlogSection />
         </AnimatedSection>
 
