@@ -61,7 +61,7 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
               {children}
             </blockquote>
           ),
-          code: ({ inline, children }) => {
+          code: ({ inline, children, className, ...props }: any) => {
             if (inline) {
               return (
                 <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
@@ -81,8 +81,8 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
             </pre>
           ),
           a: ({ href, children }) => (
-            <a 
-              href={href} 
+            <a
+              href={href}
               className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
               target="_blank"
               rel="noopener noreferrer"
@@ -91,9 +91,9 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
             </a>
           ),
           img: ({ src, alt }) => (
-            <img 
-              src={src} 
-              alt={alt} 
+            <img
+              src={src}
+              alt={alt}
               className="rounded-lg shadow-md my-6 w-full h-auto border"
             />
           ),
