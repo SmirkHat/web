@@ -45,7 +45,7 @@ export function Navigation() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-secondary/30 backdrop-blur-md supports-[backdrop-filter]:bg-secondary/10">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-secondary/30 backdrop-blur-md supports-[backdrop-filter]:bg-secondary/70">
       <div className="hidden md:block">
         <div className="container mx-auto px-4 flex h-14 items-center justify-between">
           <Link href="/" className="text-xl font-bold hover:text-primary/80 transition-colors">

@@ -29,7 +29,11 @@ export async function BlogSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-1 left-1 right-4">
                     <Badge variant="secondary" className="text-xs bg-card/90 text-card-foreground border-0">
-                      {post.date}
+                      {new Date(post.date).toLocaleDateString("cs-CZ", {
+                        day: 'numeric',
+                        month: 'numeric',
+                        year: 'numeric',
+                      })}
                     </Badge>
                   </div>
                 </div>

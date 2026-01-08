@@ -19,6 +19,13 @@ const services = [
   { icon: Server, title: "DomainMOD", description: "Správa veškerých domén, jejich expirací a prodlužování", access: "Invite only", url: "https://dom.smht.eu/" },
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Aplikace a projekty",
+  description: "Bezplatné nástroje a služby pro komunitu SmirkHat - od pastebinu přes color picker až po zmenšovač obrázků.",
+}
+
 export default function SluzbyPage() {
   return (
     <div className="min-h-screen bg-background">

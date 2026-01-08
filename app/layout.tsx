@@ -9,7 +9,11 @@ import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
   description: siteConfig.description,
   keywords: siteConfig.keywords.join(", "),
   authors: [{ name: siteConfig.author.name, url: siteConfig.author.url }],
@@ -33,7 +37,10 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
   },
   openGraph: {
-    title: siteConfig.title,
+    title: {
+      default: siteConfig.title,
+      template: `%s | ${siteConfig.name}`,
+    },
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -50,7 +57,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.title,
+    title: {
+      default: siteConfig.title,
+      template: `%s | ${siteConfig.name}`,
+    },
     description: siteConfig.description,
     images: [siteConfig.ogImage],
     creator: siteConfig.social.twitter,
