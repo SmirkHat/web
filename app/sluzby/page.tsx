@@ -22,7 +22,7 @@ const services = [
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Aplikace a projekty",
+  title: "Služby",
   description: "Bezplatné nástroje a služby pro komunitu SmirkHat - od pastebinu přes color picker až po zmenšovač obrázků.",
 }
 

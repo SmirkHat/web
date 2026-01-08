@@ -47,7 +47,7 @@ const emojis = [
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Stáhnout Emoji",
+  title: "Stáhnout",
   description: "Stáhněte si legendární SmirkHat emoji a jeho varianty pro Discord, Twitch nebo Slack.",
 }
 

@@ -59,7 +59,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "O nás",
-  description: "Seznamte se s týmem nadšenců, kteří stojí za projektem SmirkHat.org a dalšími open-source aktivitami.",
+  description: "Seznamte se s týmem nadšenců, kteří stojí za projektem SmirkHat.org.",
 }
 
 export default function ONasPage() {
