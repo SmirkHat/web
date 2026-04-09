@@ -50,7 +50,7 @@ export function Footer() {
             <p className="text-muted-foreground text-xs">© 2026 SmirkHat.org. Všechna práva vyhrazena.</p>
             <p className="text-xs">
               Vytvořil{" "}
-              <Link href="https://www.sebesta.dev" className="text-primary hover:underline font-medium">
+              <Link href="https://www.sebesta.dev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
                 Daniel Šebesta
               </Link>
             </p>

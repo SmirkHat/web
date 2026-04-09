@@ -20,11 +20,18 @@ export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
   const router = useRouter()
   const pathname = usePathname()
+  const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  React.useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+  }, [])
 
   const handleNavClick = (href: string) => {
     if (href === "/#blog") {
       router.push("/")
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         const element = document.getElementById("blog")
         if (element) {
           element.scrollIntoView({ behavior: "smooth" })

@@ -141,6 +141,8 @@ export default function ONasPage() {
                       {member.github ? (
                         <a
                           href={`https://github.com/${member.github}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted/50 hover:bg-primary/10 text-xs text-muted-foreground hover:text-primary transition-colors"
                           title={`GitHub: @${member.github}`}
                         >
@@ -150,6 +152,8 @@ export default function ONasPage() {
                       ) : member.instagram ? (
                         <a
                           href={`https://instagram.com/${member.instagram}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted/50 hover:bg-primary/10 text-xs text-muted-foreground hover:text-primary transition-colors"
                           title={`Instagram: @${member.instagram}`}
                         >

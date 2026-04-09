@@ -1,10 +1,10 @@
-import { getBlogPost } from "@/lib/blog"
+import { getBlogPost, getAllBlogSlugs, formatDate } from "@/lib/blog"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import ReactMarkdown from "react-markdown"
+import MarkdownRenderer from "@/components/markdown"
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -13,6 +13,11 @@ interface BlogPostPageProps {
 }
 
 import { siteConfig } from "@/lib/site-config"
+
+export async function generateStaticParams() {
+  const slugs = await getAllBlogSlugs()
+  return slugs.map((slug) => ({ slug }))
+}
 
 export async function generateMetadata(
   props: BlogPostPageProps
@@ -86,11 +91,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
 
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
-              {new Date(post.date).toLocaleDateString("cs-CZ", {
-                day: 'numeric',
-                month: 'numeric',
-                year: 'numeric',
-              })}
+              {formatDate(post.date)}
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight mb-4 text-balance">
               {post.title}
@@ -103,9 +104,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
             </div>
           </div>
 
-          <div className="prose prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground max-w-none">
-            <ReactMarkdown>{post.content}</ReactMarkdown>
-          </div>
+          <MarkdownRenderer content={post.content} className="prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground" />
         </article>
       </div>
     </div>

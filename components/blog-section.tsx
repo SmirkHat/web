@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { getBlogPosts } from "@/lib/blog"
+import { getBlogPosts, formatDate } from "@/lib/blog"
 import Link from "next/link"
 
 export async function BlogSection() {
@@ -29,11 +29,7 @@ export async function BlogSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-1 left-1 right-4">
                     <Badge variant="secondary" className="text-xs bg-card/90 text-card-foreground border-0">
-                      {new Date(post.date).toLocaleDateString("cs-CZ", {
-                        day: 'numeric',
-                        month: 'numeric',
-                        year: 'numeric',
-                      })}
+                      {formatDate(post.date)}
                     </Badge>
                   </div>
                 </div>

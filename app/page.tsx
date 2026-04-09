@@ -1,11 +1,9 @@
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
+import { CestinaBanner } from "@/components/cestina-banner"
 import { BlogSection } from "@/components/blog-section"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Mail, MessageCircle, Github, Globe, Quote, Twitter, Linkedin, MapPin, Calendar, Coffee, Instagram } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
 
 export default async function HomePage() {
   return (
@@ -17,8 +15,10 @@ export default async function HomePage() {
         <AnimatedSection immediate>
           <FeaturesSection />
         </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <CestinaBanner />
+        </AnimatedSection>
         <AnimatedSection delay={0.2}>
-
           <BlogSection />
         </AnimatedSection>
 
